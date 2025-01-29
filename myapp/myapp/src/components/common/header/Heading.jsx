@@ -1,14 +1,17 @@
-import React from "react"
-
-const Heading = ({ title, subtitle }) => {
+const Heading = ({
+  title,
+  subtitle,
+  titleColor = "black",
+  subtitleColor = "#121",
+}) => {
   return (
     <>
-      <div className='heading'>
-        <h1>{title}</h1>
-        <p>{subtitle}</p>
+      <div>
+        <h1 style={{ color: titleColor }}>{title}</h1>
+        <p style={{ color: subtitleColor }}>{subtitle}</p>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default Heading
+export default Heading;

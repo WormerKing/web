@@ -121,21 +121,23 @@ img {
   border: 5px solid #27ae601f;
   background: #fff;
 }
+
 .back {
   height: 40vh;
-  position: relative;
+  position: sticky;
 }
 .back img {
   height: 40vh;
   position: absolute;
   top: 0;
   left: 0;
-  z-index: -1;
+  z-index: -1; /* Eğer arka planda kalmasını istiyorsanız bu değer uygun */
   object-fit: cover;
 }
+
 .back::after {
   content: "";
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
   width: 100%;
@@ -144,7 +146,7 @@ img {
   z-index: -1;
 }
 .back .container {
-  color: #fff;
+  color: black;
   padding: 120px 0;
 }
 .back h1 {
